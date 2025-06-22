@@ -47,7 +47,6 @@ let arr = [ 1 ,2 ,3 ,4];
 let arr2 = [];
 
 for(i =arr.length; i > 0; i--){
-    console.log(arr[i]);
     arr2.push(i)
 
 }
@@ -55,3 +54,15 @@ for(i =arr.length; i > 0; i--){
 console.log(arr2)
 
 //5
+
+const mixedArray = [42, "hello", true, { name: "Ali" }, false, "world", 99, {}, null, [1, 2, 3]];
+
+const typecount = {}
+
+for(let item of mixedArray){
+    let type = typeof item 
+
+    typecount[type] = (typecount[type] || 0) +1
+}
+
+console.log(typecount)
